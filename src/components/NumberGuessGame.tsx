@@ -3,11 +3,11 @@ import { useState } from "react";
 const getRandomTarget = () => Math.floor(Math.random() * 100) + 1;
 
 const NumberGuessGame = () => {
-  const [target, setTarget] = useState(getRandomTarget);
-  const [guess, setGuess] = useState("");
-  const [message, setMessage] = useState("");
-  const [isWin, setIsWin] = useState(false);
-  const [history, setHistory] = useState([]);
+  const [target, setTarget] = useState<number>(getRandomTarget);
+  const [guess, setGuess] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [isWin, setIsWin] = useState<boolean>(false);
+  const [history, setHistory] = useState<number[]>([]);
 
   const handleSubmit = () => {
     console.log("타겟:", target);
